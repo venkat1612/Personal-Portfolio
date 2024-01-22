@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./FAVI.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #b8b8de;
+            color: azure;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* nav section starts here */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 30px;
+            align-items: center;
+            background-color: rgb(62, 164, 193);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar span {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 700;
+        }
+
+        .skyBlue {
+            color: rgb(15, 136, 184);
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar ul li {
+            margin: 0 5px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: aliceblue;
+            padding: 10px 20px;
+            margin: 0 5px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar ul li a:hover {
+            text-shadow: 0 0 30px whitesmoke;
+            color: #ffcc00;
+        }
+
+
+
+
+
+        /*                 Main Section              */
+
+
+
+        .mainSection1 {
+            display: grid;
+            /* Change to grid */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* Adjust based on your needs */
+            gap: 20px;
+            /* Adjust gap as needed */
+            padding: 40px;
+            /* Adjust padding for uniform spacing */
+            border: 2px solid black;
+            padding-top: 100px;
+        }
+
+        /* Image Effects */
+        .user img {
+            width: 100%;
+            /* Make the image responsive */
+            border-radius: 10px;
+            animation: slideIn 1s ease-in-out, screen;
+            /* Combine animations */
+        }
+
+
+
+.mainSection1 {
+            display: grid;
+            /* Change to grid */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* Adjust based on your needs */
+            gap: 20px;
+            /* Adjust gap as needed */
+            padding: 40px;
+            /* Adjust padding for uniform spacing */
+            border: 2px solid black;
+            padding-top: 100px;
+        }
+
+        .content {
+            max-width: 600px;
+            padding-right: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .title {
+            font-size: 50px;
+            color: rgb(15, 136, 184);
+        }
+
+        .minorHeading {
+            color: rgb(111, 112, 112);
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        .danger {
+            color: red;
+        }
+
+        .description {
+            margin: 20px 0;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0.1;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Image Effects */
+        .user img {
+            width: 100%;
+            /* Make the image responsive */
+            border-radius: 10px;
+            animation: slideIn 1s ease-in-out, screen;
+            /* Combine animations */
+        }
+
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(350px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Query for Mobile */
+        @media screen and (max-width: 768px) {
+            .mainSection1 {
+                grid-template-columns: 1fr;
+                /* Change to a single column for mobile */
+            }
+        }
+
+
+
+
+
+
+
+
+        /* about me css edit here */
+
+
+
+        #aboutMe {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 2px solid black;
+            padding-top: 250px;
+            padding-bottom: 200px;
+        }
+
+        #aboutMe img {
+            width: 400px;
+            margin: 20px;
+            border-radius: 10px;
+            animation: screen;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .content {
+            margin: 20px 0;
+        }
+
+        .content h2 {
+            font-size: 50px;
+            color: #ffca70;
+        }
+
+        .content h4 {
+            font-size: 20px;
+            color: #fff;
+            margin: 10px 0;
+        }
+
+        .description {
+            color: #fff;
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 100;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .btn {
+            font-weight: bold;
+            border: 2px solid #ffca70;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.4s;
+            background-color: #ffca70;
+        }
+
+        .btn:hover {
+            border: 2px solid #ffca70;
+            background: transparent;
+            color: #ffca70;
+        }
+
+        @media screen and (max-width: 790px) {
+            #aboutMe img {
+                width: 80%;
+            }
+
+            #aboutMe {
+                grid-template-columns: 1fr;
+                place-items: center;
+            }
+        }
+
+
+
+        /* SKILLS CSS CODE */
+
+        .heading-skills {
+            font-size: 50px;
+            color: #ffca70;
+            text-align: center;
+            padding-top: 145px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            padding: 32px;
+            flex-wrap: wrap;
+        }
+
+        .left {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 384px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .right {
+            width: 50%;
+        }
+
+        .right ul .bar {
+            height: 6.4px;
+            position: relative;
+            list-style: none;
+            border-radius: 10px;
+            margin: 48px 0;
+            animation: skills;
+            animation-duration: 1s;
+        }
+
+        .right ul .html {
+            width: 90%;
+            background-color: #e54c21;
+        }
+
+        .right ul .css {
+            width: 80%;
+            background-color: #00a0e4;
+        }
+
+
+        .right ul .js {
+            width: 70%;
+            background-color: yellow;
+        }
+
+        .right ul .bootstrap {
+            width: 80%;
+            background-color: #7952b3;
+        }
+
+
+        .right ul .reactjs {
+            width: 30%;
+            background-color: #61dafb;
+        }
+
+        .right ul .Python {
+            width: 60%;
+            background-color: #c6ea69;
+        }
+
+        .right ul .SQL {
+            width: 35%;
+            background-color: #2d0edc;
+        }
+
+        .language {
+            position: absolute;
+            bottom: 9.6px;
+            left: 0;
+        }
+
+        .percentage {
+            position: absolute;
+            bottom: 9.6px;
+            right: 0;
+        }
+
+        @media screen and (max-width: 834px) {
+            .skills {
+                padding: 8px;
+            }
+
+            .right {
+                width: 90%;
+            }
+        }
+
+        /* RESUME CSS CODE  */
+
+        /* Resume section styles */
+        #resume {
+
+            padding-top: 100px;
+            padding-bottom: 100PX;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        #resume h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #resume p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        #resume a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #resume a:hover {
+            background-color: #0056b3;
+        }
+
+
+
+
+
+        /* CONTACT CSS EDIT  */
+
+
+        /* Contact section styles */
+        #contact-info {
+            padding-top: 100px;
+            padding-bottom: 150px;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        #contact-info h2 {
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        #contact-info p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        #contact-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        #contact-info li {
+            margin: 0 15px;
+        }
+
+        #contact-info a {
+            text-decoration: none;
+            color: #fa55b0;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #contact-info a:hover {
+            color: #0056b3;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .footer {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .website-heading {
+            text-align: center;
+            width: 100%;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 35px;
+        }
+
+        .footer-item {
+            width: 250px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .footer-heading {
+            color: #e65b00;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .footer ul li {
+            list-style: none;
+            font-size: 15px;
+            margin: 10px 0;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .footer ul li:hover {
+            color: #e65b00;
+        }
+
+
+        /* Image Sizes (Media Queries) */
+        img {
+            max-width: 800px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            img {
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            img {
+                max-width: 400px;
+            }
+        }
+
+        /* Text Size and Spacing (Media Queries) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            p {
+                line-height: 1.5;
+                margin-bottom: 15px;
+                /* Adjust as needed */
+            }
+        }
+
+        /* Navigation Bar (Media Query for Tablets and Mobile) */
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+            }
+
+            .navbar ul.show {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: rgb(62, 164, 193);
+            }
+
+            .navbar ul.show li {
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        /* Other media queries for specific adjustments */
+
+        @media screen and (max-width: 790px) {
+
+            /* Adjustments for aboutMe section */
+            #aboutMe img {
+                width: 80%;
+            }
+
+            #aboutMe {
+                grid-template-columns: 1fr;
+                place-items: center;
+            }
+        }
+
+        @media screen and (max-width: 834px) {
+
+            .skills {
+                padding: 8px;
+            }
+
+            .right {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2 class="heading">
+            <span class="skyBlue">My</span>
+            <span>Portfolio.</span>
+        </h2>
+        <ul>
+            <li><a href="#section1"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#aboutMe"><i class="fas fa-user"></i> About Me</a></li>
+            <li><a href="#Technical"><i class="fas fa-code"></i> Skills</a></li>
+            <!-- <li><a href="#"><i class="fas fa-project-diagram"></i> Projects</a></li> -->
+            <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+            <li><a href="#contact-info"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+
+        <section class="mainSection1" id="section1">
+            <div class="content">
+                <h2 class="title">
+                    <span class="minorHeading">
+                        Hey
+                    </span><br>
+                    <span class="mainHeading">
+                        I'm <span class="danger">Venkata Sai |</span>
+                    </span>
+                </h2>
+                <p class="description">
+                    <i> Welcome to my portfolio! A dedicated and passionate web developer based in Hyderabad, India.
+                        With a Master's in Business Administration specialized in Finance and Marketing, I graduated
+                        from
+                        R.V.R. & J.C. College of Engineering in 2022. My journey in web development began during my MBA,
+                        where I gained expertise in various languages like HTML, CSS, JavaScript, Python, and SQL. I am
+                        excited about creating visually appealing and intuitive websites, and I am committed to staying
+                        updated with the latest trends and best practices.</i>
+                </p>
+            </div>
+            <div class="user">
+                <img src="https://img.freepik.com/free-photo/3d-portrait-people_23-2150793856.jpg?size=626&ext=jpg&ga=GA1.1.1500617583.1705305742&semt=ais"
+                    alt="">
+            </div>
+
+        </section>
+
+
+        <!--                  about me                        -->
+
+
+
+        <section id="aboutMe">
+            <img src="https://storage.googleapis.com/pai-images/7761d3f7031e43e1adb859b3313daeed.jpeg"
+                alt="computer user">
+            <div class="content">
+                <h2>About Me</h2>
+                <h4> Developer & Designer </h4>
+                <p class="description">
+                    I am a Front-end web developer. I can provide clean code and pixel perfect design. I also make the
+                    website more & more interactive with web animations. I can provide clean code and pixel perfect. I
+                    also
+                    make the website more & more interactive with web animations. A responsive design makes your website
+                    accessible to all users. regardless of their device.
+                </p>
+                <button class="btn" onclick="displayContactInfo()">Hire Me</button>
+            </div>
+        </section>
+
+
+        <!--                       SKILLS SECTION                     -->
+
+
+        <h2 class="heading-skills" id="Technical"> Technical Skills Bar </h2>
+        <section class="skills" id="skills">
+            <div class="left">
+                <img src="https://t3.ftcdn.net/jpg/06/01/17/18/360_F_601171862_l7yZ0wujj8o2SowiKTUsfLEEx8KunYNd.jpg"
+                    alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li class="bar html"> <span class="language"> HTML </span> <span class="percentage"> 90% </span>
+                    </li>
+                    <li class="bar css"> <span class="language "> CSS </span> <span class="percentage"> 80% </span>
+                    </li>
+                    <li class="bar js"> <span class="language "> JavaScript </span> <span class="percentage"> 70%
+                        </span>
+                    </li>
+                    <li class="bar bootstrap"> <span class="language "> Bootstrap </span> <span class="percentage"> 80%
+                        </span> </li>
+                    <li class="bar reactjs"> <span class="language "> ReactJS </span> <span class="percentage"> 40
+                        </span>
+                    </li>
+                    <li class="bar Python"> <span class="language "> Python </span> <span class="percentage"> 60%
+                        </span>
+                    </li>
+                    <li class="bar SQL"> <span class="language "> SQL </span> <span class="percentage"> 35%
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+
+
+        <!--                    RESUME SECTION               -->
+
+        <section id="resume" role="region" aria-labelledby="resume-heading">
+            <h2>Resume</h2>
+            <p>Download my resume to learn more about my professional background:</p>
+            <a href="../Personal-Portfolio/MY RESUME.pdf" download>Download Resume (PDF)</a>
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--                    CONTACT SECTION               -->
+
+
+
+        <section id="contact-info" role="region" aria-labelledby="contact-info-heading">
+            <h2>Contact</h2>
+            <p>Let's connect! Reach out to me via email or through my social media profiles:</p>
+            <ul>
+                <li>Email: <a href="mailto:venkatasaikandipati1612@gmail.com"> Send email</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/venkata-sai-kandipati-b83b7729b" target="_blank">
+                        LinkedIn Profile</a></li>
+                <li>GitHub: <a href="https://github.com/venkat1612" target="_blank"> GitHub Profile</a></li>
+            </ul>
+        </section>
+
+
+
+
+
+
+
+        <!--                  FOOTER SECTION                   -->
+
+
+
+
+        <footer class="footer">
+            <h2 class="website-heading"> <i>Thank You</i></h2>
+            <div class="footer-item">
+                <h2 class="footer-heading"> My Portfolio </h2>
+                <ul>
+                    <li> About Me </li>
+                    <li> Contact </li>
+                    <li> Projects </li>
+                    <li> Work with Us </li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h2 class="footer-heading"> Courses </h2>
+                <ul>
+                    <li> HTML </li>
+                    <li> CSS </li>
+                    <li> JavaScript </li>
+                    <li> Bootstrap </li>
+                    <li> ReactJS </li>
+                    <li> Python</li>
+                    <li> SQL </li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h2 class="footer-heading"> Tools </h2>
+                <ul>
+                    <li> Git</li>
+                    <li> VS Code </li>
+                    <li> GitHub </li>
+                </ul>
+            </div>
+            <p class="website-heading">&copy; 2024 Venkata Sai Kandipati - Web Developer</p>
+        </footer>
+
+
+
+        <script>
+            function displayContactInfo() {
+                // You can customize the content of the pop-up box here
+                var contactInfo = "Email: venkatasaikandipati1612@gmail.com\nLinkedIn: linkedin.com/in/venkata-sai-kandipati\nGitHub: github.com/venkat1612";
+
+                // Display the pop-up box
+                alert(contactInfo);
+            }
+
+        </script>
+    </section>
+
+
+</body>
+
+</html>
